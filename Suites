@@ -1,0 +1,75 @@
+1. Suite explicite
+
+Ecrire un programme qui calcule les 20 premiers termes de la suite définie pour tout entier naturel n par u_n = n^2 + 1
+
+for n in range(20):
+  u=n**2+1
+  print(n,u)
+
+La première ligne définit n, qui prend les 20 premières valeurs, c'est-à-dire de 0 jusqu'à 19.
+Ensuite, on écrit la formule qui nous est donnée, pour ensuite imprimer les différentes valeurs de u lorsque n varie.
+
+Voici les resultats, n étant à droite et u à gauche :
+
+0 1
+1 2
+2 5
+3 10
+4 17
+5 26
+6 37
+7 50
+8 65
+9 82
+10 101
+11 122
+12 145
+13 170
+14 197
+15 226
+16 257
+17 290
+18 325
+19 362
+
+2. Suite par récurrence
+
+Écrire un programme Python qui calcule les 20 premiers termes de la suite définie par:
+u_0 = 1
+u_{n + 1} = \sqrt{ 1+ (u_n)^2 }
+
+from math import sqrt
+u=1
+print(u)
+for n in range(19):
+	u=sqrt(1+u**2)
+	print(u)
+	
+La première ligne permet d'utiliser la fonction racine carré.
+Ensuite, on donne la valeur de u_0 qui est égal à 1 avant de donner la formule car u_1 dépend de la valeur précédente
+(pour rappel, ceci est une suite par récurrence : on a besoin de la valeur précédente afin de calculer la prochaine !)
+Etant donné qu'on a déjà la valeur de u_0, il ne nous reste qu'à calculer les 19 autres valeurs de u.
+Après, on écrit la formule et on imprime les résultats.
+
+Voici les résultats : 
+
+1
+1.4142135623730951
+1.7320508075688774
+2.0
+2.23606797749979
+2.4494897427831783
+2.6457513110645907
+2.8284271247461903
+3.0000000000000004
+3.1622776601683795
+3.3166247903554003
+3.4641016151377553
+3.60555127546399
+3.741657386773942
+3.872983346207418
+4.000000000000001
+4.1231056256176615
+4.242640687119286
+4.358898943540674
+4.47213595499958
