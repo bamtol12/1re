@@ -1,0 +1,45 @@
+Résolution des équations du second degré :
+
+from math import*
+print("""Resolution des equations du second degre
+
+        ax^2 + bx + c = 0
+
+""")
+
+a = float(input("Enter la valeur de a: "))
+b = float(input("Enter la valeur de b: "))
+c = float(input("Enter la valeur de c: "))
+
+def racines_trinome(a,b,c):
+    if a==0 and b!=0:
+        return [-c/b]
+    elif a==0 and b==0 and c!=0:
+        return None
+    elif a==0 and b==0 and c==0:
+        return ["R"]
+    elif a!=0:
+        delta = b**2-4*a*c
+        if delta==0:
+            return [-b/(2*a)]
+        elif delta < 0:
+            return None
+        else:
+            return [(-b-sqrt(b**2-4*a*c))/(2*a), (-b+sqrt(b**2-4*a*c))/(2*a)]
+
+S = racines_trinome(a,b,c)
+
+if S == None:
+    print("[]")
+elif len(S) == 1:
+    print(f"[{S[0]}]")
+else :
+    S.sort()
+    print(f"{S}")
+
+l. 17 : Si a==0 and b==0 et c!=0, alors c!=0 est égal à 0, et ceci est impossible.
+l. 20 : Il y a une infinité de solutions ; x appartient au Réel:
+l.22 : delta est le discriminant.
+Or, on sait que si Delta<0, l'équation ne possède aucune racine réelle(l.26).
+Si Delta = 0, l'équation ne possède qu'une seule racine réelle(l.24), qui peut être calculée par l'équation -b/2a.
+Si Delta> 0, l'équation possède deux racines réelles (l.28).
