@@ -1,0 +1,26 @@
+Aujourd'hui nous allons apprendre comment déterminer la distance 
+entre 2 points dont les coordonnées nous sont connues.
+
+Tout d'abord, il faut importer sqrt (la racine carrée, square root en anglais) 
+puisque nous en avons besoin.
+
+
+from math import sqrt
+def d_points(xA,yA,xB,yB):
+	d=sqrt((xB-xA)**2+(yB-yA)**2)
+	return d
+  
+  
+Soient deux points A(x,y) et B(x,y). 
+Pour pouvoir calculer leur distance, il faut utiliser la formule :
+√(xB-xA)^2+(yB-yA)^2.
+
+Calculons la distance entre A(1,2) et B(4,6).
+xA=1      yA=2
+xB=4      yB=6
+
+>>> d_points(1,2,4,6)
+5.0
+
+Ainsi, la distance entre ces deux points est de 5 cm.
+
