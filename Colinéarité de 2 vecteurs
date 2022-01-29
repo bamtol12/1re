@@ -1,0 +1,39 @@
+Bonjour ! 
+Aujourd'hui nous allons déterminer si deux vecteurs sont colinéaires ou non.
+
+
+def colineaire(xU,yU,xV,yV):
+	det=(xU*yV)-(yU*xV)
+	if det==0:
+		print("Les deux vecteurs sont bien colinéaires")
+	else:
+		print("Les deux vecteurs ne sont pas colinéaires")
+    
+    
+Soient deux vecteurs non nuls →u(x1,y1) et →v(x2,y2).
+Pour prouver la colinéarité de deux vecteurs, il suffit d'appliquer la formule : 
+det(→u,→v)=(x1*y2)-(y1*x2), et si det(→u,→v)=0, alors les 2 vecteurs sont colinéaires.
+Sinon, ils ne le sont pas.
+
+Prenons deux exemples.
+
+Soient deux vecteurs →u(-2,-3) et →v(4,-6).
+Sont-ils colinéaires ?
+
+
+>>> colineaire(2,-3,4,-6)
+Les 2 vecteurs sont bien colinéaires
+
+
+En effet, det(→u,→v)= 2*(-6)-(-3)*4= -12+12 = 0
+Ainsi, →u et →v sont bien colinéaires.
+
+Soient deux vecteurs →u(3,-2) et →v(12,-5).
+Sont-ils colinéaires ?
+
+
+>>> colineaire(3,-2,12,-5)
+Les deux vecteurs ne sont pas colinéaires
+
+En effet, det(→u,→v)= 3*(-5)-(-2)*12= -15+24 = 9 ≠ 0
+Les deux vecteurs ne sont donc pas colinéaires.
