@@ -1,4 +1,69 @@
-Nous allons apprendre ici comment calculer le volume d'un cube, d'un pavé droit, d'un cylindre, d'une sphère et d'un cône.
+Nous allons apprendre ici comment calculer le volume d'un cube, d'un pavé droit, d'un cylindre et d'une sphère.
 Tout cela en utilisant Python.
 
 Nous allons commencer par la formule Python qui permet de calculer le volume d'un cube.
+
+def vol_cube(c):
+  v=c**3
+  return v
+  
+En effet, on peut retrouver le volume d'un cube en faisant : c x c x c = c^3.
+
+Si le côté d'un cube est de 5 cm, alors son volume est de 125 cm^3 :
+
+>>> vol_cube(5)
+125
+
+
+Comment calculer le volume d'un pavé droit ?
+
+def vol_pavedroit(L,l,h):
+  v=L*l*h
+  return v
+  
+En effet, on retrouve le volume d'un pavé droit en multipliant la longueur(L) par la largeur(l) et la hauteur(h).
+
+Quel est le volume d'un pavé droit lorsque sa longueur est de 7 cm, sa largeur de 4 cm et sa hauteur de 5 cm ?
+
+>>> vol_pavedroit(7,4,5)
+140
+
+Il est de 140 cm^3.
+
+Comment calculer le volume d'un cylindre ?
+
+from math import pi
+def vol_cylindre(r,h):
+  v=pi*r**2*h
+  return v
+  
+On doit importer pi puisque pi est nécessaire afin de pouvoir calculer le volume d'un cylindre, 
+qui est obtenu en multipliant pi par le rayon5(r) au carré et par la hauteur(h) du cylindre.
+
+Quel est le volume d'un cylindre dont le rayon est de 5 cm et la hauteur est de 8 cm ?
+
+>>> vol_cylindre(5,8)
+628.3185307179587
+
+Il est environ de 628,3 cm^3.
+
+Enfin, nous allons calculer le volume d'une sphère.
+
+from math import pi
+def vol_sphere(r):
+  v=(4/3)*pi*r**3
+  return v
+  
+Comme pi est encore indispensable, il est obligatoire de l'importer afin de calculer le
+volume d'une sphère, qu'on peut obtenir en multipliant 4/3 par pi et par 
+le rayon(r) de la sphère au cube.
+
+Quel est le volume de la sphère dont le rayon est de 3 cm ?
+
+>>> vol_sphere(3)
+113.09733552923254
+
+Elle est environ de 113,1 cm^3.
+
+Voilà ! J'espère que cela vous a bien aidé pour vos études.
+A bientôt !
