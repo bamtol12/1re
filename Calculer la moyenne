@@ -1,0 +1,25 @@
+Nous verrons calculer la moyenne d'une liste Python.
+
+On sait qu'une moyenne est la somme des valeurs de la liste donnée 
+divisée par le nombre de valeurs.
+Tout d'abord, on va donner la liste L qui contient toutes les valeurs.
+A partir de cette liste, on va calculer la moyenne. 
+Comme la moyenne est égale à la somme des valeurs de la liste donnée 
+divisée par le nombre total de valeurs, on va utiliser sum(L) qui renvoie 
+la somme des valeurs de la liste et len(L) qui renvoie la longueur, 
+donc le nombre total de valeurs.
+
+Voici le programme qui calcule la moyenne d'une liste Python :
+
+L = [3,8,12,59,76]
+moyenne = sum(L)/len(L)
+print(moyenne)
+
+31.6
+
+Ce programme retourne 31,6.
+Vérifions si 31,6 est bien la bonne réponse.
+
+Moyenne = (3+8+12+59+76)/5 = 158/5 = 31.6
+
+31,6 est donc bel et bien la moyenne de la liste L.
