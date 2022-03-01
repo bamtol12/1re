@@ -1,0 +1,24 @@
+Nous verrons aujourd'hui comment calculer la médiane.
+
+Tout d'abord, il est nécessaire d'importer la bibliothèque statistics afin de simplifier la mission.
+En effet, le module statistics contient déjà la fonction median() qui permet de calculer la médiane d'une liste.
+
+Voici le programme qui permet de calculer la médiane d'une liste Python :
+
+import statistics
+L=[5,7,2,4,1,1,10]
+print(statistics.median(L))
+
+4
+
+Ce programme retourne 4.
+
+Vérifions si 4 est bien la médiane de cette liste.
+Premièrement, il faut mettre les valeurs dans l'ordre croissant :
+
+1 1 2 4 5 7 10
+
+Cette liste contient 7 valeurs.
+La valeur qui est au milieu est la quatrième valeur, qui équivaut à 4 et qui représente donc la médiane de la liste.
+
+Ainsi, 4 est bien la médiane de cette liste.
